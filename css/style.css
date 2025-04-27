@@ -1,0 +1,12 @@
+.centrado{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+figure{
+    background-image: url(../img/Portada.png);
+    background-position: center;
+    background-size: cover;
+}
