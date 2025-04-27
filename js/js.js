@@ -2,13 +2,21 @@
 
 let buttonConfirmar = document.getElementById("btnConfirmar")
 let buttonReiniciar = document.getElementById("btnReiniciar")
+let buttonJugar = document.getElementById("btnJugar")
 let mensaje = document.getElementById("mensaje")
 let resultado = document.getElementById("resultado")
 let intentos = document.getElementById("intentos")
+let seccionJuego = document.getElementById("juego")
+let seccionPortada = document.getElementById("portada")
 let numeroAleatorio = aleatorio(0, 100)
 let contador = 10
 
 //Funciones
+function jugar(){
+    seccionJuego.style.display ="block"
+    seccionPortada.style.display ="none"
+}
+
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -60,7 +68,7 @@ function reiniciarJuego(){
 }
 
 //No mostrar la seccion "Juego"
-let seccionJuego = document.getElementById("juego")
+
 seccionJuego.style.display ="none"
 
 //No mostrar el boton reiniciar
@@ -69,6 +77,7 @@ buttonReiniciar.style.display ="none"
 //Invocar funciones
 buttonConfirmar.addEventListener("click", confirmarAccion)
 buttonReiniciar.addEventListener("click", reiniciarJuego)
+buttonJugar.addEventListener("click", jugar)
 
 
 
