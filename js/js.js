@@ -55,6 +55,8 @@ function confirmarAccion(){
         if (valorInput == numeroAleatorio) {
             resultado.textContent = `¡Felicidades! acertaste el numero que penso la computadora `
             resultado.style.display ="block"
+            buttonConfirmar.disabled = true
+            buttonReiniciar.style.display ="block"
         } else if (contador == 0){
             resultado.textContent = `Perdiste. Te quedaste sin intentos. El numero que penso la computadora es: ${numeroAleatorio}`
             resultado.style.display ="block"

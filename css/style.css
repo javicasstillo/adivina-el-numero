@@ -5,7 +5,105 @@
     justify-content: center;
 }
 
-.posicion{
-    position: relative;
-    bottom: 18%;
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+#btnJugar {
+    animation: flotar 2s ease-in-out infinite;
+}
+
+#btnJugar:hover{
+    background-color: blueviolet;
+
+}
+
+.bg-violeta{
+    background-color: blueviolet;
+}
+
+
+
+/* Sección del juego */
+#juego {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8A2BE2, #6A0DAD);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Contenedor principal */
+#juego .container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Etiqueta */
+#juego label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6A0DAD;
+}
+
+/* Input */
+#input__number {
+    width: 80px;
+    border: 2px solid #6A0DAD;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Botones Confirmar y Reiniciar */
+#btnConfirmar, #btnReiniciar {
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+#btnConfirmar:hover {
+    background-color: #4B0082;
+    color: white;
+    transform: scale(1.1);
+}
+
+#btnReiniciar:hover {
+    background-color: #228B22;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Mensajes */
+#mensaje, #resultado, #intentos {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #4B0082;
+}
+
+/* Para hacerlo más responsive */
+@media (max-width: 768px) {
+    #juego .container {
+        padding: 20px;
+    }
+
+    #input__number {
+        width: 60px;
+    }
+
+    #btnConfirmar, #btnReiniciar {
+        width: 100px;
+    }
+}
+#input__number:focus {
+    outline: none; /* quitamos el borde feo del navegador */
+    border: 2px solid #8A2BE2; /* borde violeta */
+    box-shadow: 0 0 8px #8A2BE2; /* un brillito violeta opcional */
 }
